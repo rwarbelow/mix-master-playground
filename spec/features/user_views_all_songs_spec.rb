@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "User views songs" do
-  scenario "they see all songs " do
+  scenario "they see all songs sorted alphabetically by title" do
     artist               = create(:artist_with_songs, songs_count: 3)
     first, second, third = artist.songs.sort_by{ |song| song.title }
 
